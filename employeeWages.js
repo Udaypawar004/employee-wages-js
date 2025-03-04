@@ -69,6 +69,7 @@ const storeDailyWages = () => {
 storeDailyWages();
 console.log(dailyWages);
 
+// uc7
 const dailyWageOperations = () => {
     const totalWage = dailyWages.reduce((total, wage) => total + wage, 0);
     const dayWages = dailyWages.map(
@@ -91,3 +92,16 @@ const dailyWageOperations = () => {
     };
 };
 console.log(dailyWageOperations());
+
+//uc8
+let dailyWageMap = new Map();
+const storeWageInMap = () => {
+  for (let i = 0; i < 20; i++) {
+    dailyWageMap.set(`Day ${i + 1}`, getDailyWage());
+  }
+  let totalWage = 0;
+  dailyWageMap.forEach((wage) => (totalWage += wage));
+  return totalWage;
+};
+storeWageInMap();
+console.log(dailyWageMap);
