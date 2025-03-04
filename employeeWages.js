@@ -123,3 +123,17 @@ const wageAndHoursMap = () => {
     return { totalWage, fullDays, partDays, noWorkDays };
 };
 console.log(wageAndHoursMap());
+
+//uc10
+let dailyWorkData = [];
+const storeDailyWorkData = () => {
+  for (let i = 0; i < 20; i++) {
+    dailyWorkData.push({
+      day: `Day ${i + 1}`,
+      hoursWorked: getWorkHours(),
+      wageEarned: getWorkHours() * 20,
+    });
+  }
+};
+storeDailyWorkData();
+console.log(dailyWorkData);
