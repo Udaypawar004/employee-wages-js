@@ -156,3 +156,7 @@ const workDayOperations = () => {
     return { totalWage, totalHours, fullWorkDays, partWorkDays, noWorkDays };
 };
 console.log(workDayOperations());
+
+// uc12
+let employeeData = { id: 1, name: "Uday", salary: 60000 };
+console.log(employeeData);
